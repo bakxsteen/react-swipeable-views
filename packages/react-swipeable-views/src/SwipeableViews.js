@@ -46,10 +46,11 @@ const styles = {
     // willChange: 'transform',
   },
   slide: {
-    width: '100%',
+    width: '80%',
     WebkitFlexShrink: 0,
     flexShrink: 0,
     overflow: 'auto',
+    transform: 'translate(12%, 0px)'
   },
 };
 
@@ -75,8 +76,8 @@ const axisProperties = {
     'y-reverse': 'column-reverse',
   },
   transform: {
-    x: (translate) => `translate(${-translate}%, 0)`,
-    'x-reverse': (translate) => `translate(${translate}%, 0)`,
+    x: (translate) => `translate(${-(translate * 0.8)}%, 0)`,
+    'x-reverse': (translate) => `translate(${(translate * 0.8)}%, 0)`,
     y: (translate) => `translate(0, ${-translate}%)`,
     'y-reverse': (translate) => `translate(0, ${translate}%)`,
   },
